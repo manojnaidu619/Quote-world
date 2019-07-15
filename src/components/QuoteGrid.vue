@@ -1,8 +1,8 @@
 <template>
  <div class="row">
-   <div class="col-4" v-for="quote in quotes">
+   <div class="col-4" v-for="(quote,index) in quotes">
      <div class="card">
-       <div class="card-body">
+       <div class="card-body" @click="remove(index)">
          {{quote}}
        </div>
      </div>
@@ -12,17 +12,28 @@
 
 <script>
  export default{
-   props: ['quotes']
+   props: ['quotes'],
+   methods: {
+     remove(index){
+       this.$emit('removeQuote',index)
+       console.log(`QuoteGrid : ${index}`)
+     }
+   }
  }
 </script>
 
 <style scoped>
  .card-body{
    font-family: 'Pacifico', cursive;
-   font-size: 25px;
+   font-size: 20px;
    text-align: center;
+   cursor: pointer;
   }
   .card{
     border: 0.2px solid slategray;
+    margin: 5px;
+  }
+  .card:hover{
+    background-color: #efc2ca;
   }
 </style>

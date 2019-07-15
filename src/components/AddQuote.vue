@@ -5,7 +5,7 @@
         <form>
           <div class="form-group">
             <textarea class="form-control" placeholder="Add a Quote" rows="3" v-model='newQuote'></textarea><br>
-            <button type="button" class="btn btn-success btn-large" @click = "PushQuote()" name="button">Add Quote</button>
+            <button type="button" class="btn btn-success btn-large" @click.prevent="PushQuote()" name="button">Add Quote</button>
           </div>
         </form>
       </div>
@@ -23,7 +23,7 @@
      },
      methods:{
        PushQuote(){
-         if(this.newQuote.length > 3){
+         if(this.newQuote.length > 3 && this.newQuote.length < 100){
            this.quotes.push(this.newQuote)
            this.newQuote = ""
          }
