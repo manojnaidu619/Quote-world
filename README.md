@@ -1,8 +1,8 @@
 # Quote-world
 
-#### SPA based on Vue.js
+## SPA based on Vue.js
 
-## Project setup
+### Project setup
 ```
 yarn install
 ```
