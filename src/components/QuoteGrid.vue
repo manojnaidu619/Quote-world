@@ -30,7 +30,7 @@
    cursor: pointer;
   }
   .card{
-    border: 0.2px solid slategray;
+    border: 2px dashed DarkGrey;
     margin: 5px;
   }
   .card:hover{
