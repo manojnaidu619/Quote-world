@@ -20,5 +20,9 @@
  .card-body{
    font-family: 'Pacifico', cursive;
    font-size: 25px;
+   text-align: center;
+  }
+  .card{
+    border: 0.2px solid slategray;
   }
 </style>
