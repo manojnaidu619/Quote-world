@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <quote-progress></quote-progress>
+      <quote-progress :count="quotes.length"></quote-progress>
       <add-quote :quotes='quotes'></add-quote>
       <quote-grid :quotes='quotes' @removeQuote="deleteQuote"></quote-grid>
       <div v-if="this.quotes.length > 0" class="row justify-content-center">
@@ -22,7 +22,7 @@ export default {
    return {
      quotes: [
        'This is a Default Quote'
-     ]
+     ],
    }
  },
  components:{

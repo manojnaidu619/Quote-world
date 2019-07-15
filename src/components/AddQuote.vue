@@ -23,7 +23,7 @@
      },
      methods:{
        PushQuote(){
-         if(this.newQuote.length > 3 && this.newQuote.length < 100){
+         if(this.newQuote.length > 3 && this.newQuote.length < 100 && this.quotes.length < 10){
            this.quotes.push(this.newQuote)
            this.newQuote = ""
          }
