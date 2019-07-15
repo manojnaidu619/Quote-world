@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <div class="container">
+      <quote-progress></quote-progress>
       <add-quote :quotes='quotes'></add-quote>
       <quote-grid :quotes='quotes' @removeQuote="deleteQuote"></quote-grid>
-      <div class="row justify-content-center">
-        <div class="col-5 alert alert-primary">
+      <div v-if="this.quotes.length > 0" class="row justify-content-center">
+        <div class="col alert alert-warning">
            info : Click on the Quote to delete it!
         </div>
       </div>
@@ -15,6 +16,7 @@
 <script>
 import QuoteGrid from './components/QuoteGrid.vue'
 import AddQuote from './components/AddQuote.vue'
+import ProgressBar from './components/ProgressBar.vue'
 export default {
  data(){
    return {
@@ -25,7 +27,8 @@ export default {
  },
  components:{
    'quote-grid' : QuoteGrid,
-   'add-quote' : AddQuote
+   'add-quote' : AddQuote,
+   'quote-progress' : ProgressBar
  },
  methods:{
    deleteQuote(index){
