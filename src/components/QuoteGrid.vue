@@ -1,6 +1,6 @@
 <template>
  <div class="row">
-   <div class="col-3" v-for="quote in quotes">
+   <div class="col-4" v-for="quote in quotes">
      <div class="card">
        <div class="card-body">
          {{quote}}
@@ -16,6 +16,9 @@
  }
 </script>
 
-<style>
-
+<style scoped>
+ .card-body{
+   font-family: 'Pacifico', cursive;
+   font-size: 25px;
+  }
 </style>

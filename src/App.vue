@@ -12,8 +12,7 @@ export default {
  data(){
    return {
      quotes: [
-       'First Quote',
-       'second quotes'
+       'This is a Default Quote'
      ]
    }
  },
