@@ -2,6 +2,8 @@
 
 ## SPA based on Vue.js
 
+![](./quote-world.gif)
+
 ### Project setup
 ```
 yarn install
@@ -12,4 +14,3 @@ yarn install
 yarn run serve
 ```
 
-![](./quote-world.gif)
